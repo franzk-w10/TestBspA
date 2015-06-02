@@ -38,7 +38,7 @@ public class Prog_A {
 		if (n<2)
 			return 1;
 		else
-			return fakt(n-1);
+			return n*fakt(n-1);
 	}
 	
 	
