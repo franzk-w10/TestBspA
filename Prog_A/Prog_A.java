@@ -32,6 +32,16 @@ public class Prog_A {
 		System.out.println("\n");
 	}
 	
+	
+	//Faktorielle rekursiv
+	static long fakt(int n) {
+		if (n<2)
+			return 1;
+		else
+			return fakt(n-1);
+	}
+	
+	
 	//Ausgabe der Verabschiedung
 	static void verabschiedung() {
 			
