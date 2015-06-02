@@ -5,6 +5,13 @@ public class Prog_A {
 
 		titel("Faktorielle - Tabelle");
 		
+		for (int i=0; i<=15; i++) {
+			IO.print("\t\t");
+			IO.print(i,6);
+			IO.print("! = ");
+			IO.println(fakt(i),13);
+		}
+		
 		verabschiedung();
 
 	}
