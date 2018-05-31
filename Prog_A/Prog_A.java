@@ -5,12 +5,18 @@ public class Prog_A {
 
 		titel("Faktorielle - Tabelle");
 		
+		long start=System.currentTimeMillis();
+		
 		for (int i=0; i<=15; i++) {
 			IO.print("\t\t");
 			IO.print(i,6);
 			IO.print("! = ");
-			IO.println(fakt(i),13);
+			IO.println(fakt2(i),13);
 		}
+		
+		long end=System.currentTimeMillis();
+		long dauer=end-start;
+		IO.println("\n\tZeit in ms: "+dauer);
 		
 		verabschiedung();
 
@@ -34,12 +40,22 @@ public class Prog_A {
 	
 	
 	//Faktorielle rekursiv
-	static long fakt(int n) {
+	static long fakt1(int n) {
 		if (n<2)
 			return 1;
 		else
-			return n*fakt(n-1);
+			return n*fakt1(n-1);
 	}
+	
+	//Faktorielle nichtrekursiv
+		static long fakt2(int n) {
+			if (n<2)
+				return 1;
+			long f=1;
+			for (int i=2; i<=n; i++)
+				f*=i;
+			return f;
+		}
 	
 	
 	//Ausgabe der Verabschiedung
